@@ -2,39 +2,35 @@
 using namespace std;
 int main()
 {
-	 /*Q1.
-	Scan necessary data to find simple interest.If simple interest is greater than 5000/-,
-	ask user to buy equity of total amount(principle and simple interest).
-	If simple interest is less than or equal to 5000/-,ask user to invest total amount in mutual fund.
-	(if else code,you can't use switch case here.)*/
+	/*Q2.
+	Scan length and width (in feet, 1 foot = 12 inches) of a piece of land.Find its area.
+	Your task is to find the total cost of that land using following condition.
+	If area is greater than 1000 square feet then caluclate cost with the rate of 
+	6000 Rs per square foot.If area is less than 1000 square feet then calculate
+	cost with the rate of 5500/- Rs per square foot.*/
 	
+	float length, width, area, cost;
 
-    float p, r, t, si, total;
+    cout<<endl<<"Enter length of land (in feet): ";
+    cin>>length;
 
-    cout<<"\nEnter Principle amount: ";
-    cin>>p;
+    cout<<"Enter width of land (in feet): ";
+    cin>>width;
 
-    cout<<"\nEnter Rate of Interest: ";
-    cin>>r;
+    area = length * width;
 
-    cout<<"\nEnter Time (in years): ";
-    cin>>t;
+    cout<<"Area of land = "<<area<<" square feet"<<endl;
 
-    si = (p * r * t) / 100;
-    total = p + si;
-
-    cout<<"\nSimple Interest = "<<si<<endl;
-    cout<<"\nTotal Amount = "<<total<<endl;
-
-    if(si > 5000)
+    if(area > 1000)
     {
-        cout<<"\nBuy equity of total amount "<<total;
+        cost = area * 6000;
     }
     else
     {
-        cout<<"\nInvest total amount "<<total<<" in mutual fund";
+        cost = area * 5500;
     }
 
-    return 0;
+    cout<<"Total cost of land = Rs "<<cost<<endl;
 
+    return 0;
 }

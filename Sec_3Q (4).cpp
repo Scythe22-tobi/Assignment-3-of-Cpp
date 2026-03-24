@@ -2,31 +2,38 @@
 using namespace std;
 int main()
 {
-	/*Q3.
-	You are an employee in a Company.Your task is to calculate bonus for diwali and print
-	total salary(basic salary+bonus).Bonus should be calculated by using following conditions.
-	-if salary is more than 15000/-, bonus will be 20% of salary.
-	-if salary is less than or equal to 15000/-, bonus will be 25% of salary.
-	Print toal salary of employee for the month of Diwali.Input from user is basic salary.*/
-	
-	float salary, bonus, total;
+	float a, b;
+    int choice;
 
-    cout<<"Enter basic salary: ";
-    cin>>salary;
+    cout<<"Enter two numbers: ";
+    cin>>a>>b;
 
-    if(salary > 15000)
+    cout<<"Enter a number between 1 to 4:"<<endl<<"1. Addition"<<endl<<"2. Subtraction"<<endl<<"3. Division"<<endl;
+    cout<<"4. Multiplication";
+	cout<<"\nEnter your choice=";
+    cin>>choice;
+
+    switch(choice)
     {
-        bonus = salary * 20/100;
-    }
-    else
-    {
-        bonus = salary * 25/100;
-    }
+        case 1:
+            cout<<"Addition = "<<a + b;
+            break;
 
-    total = salary + bonus;
+        case 2:
+            cout<<"Subtraction = "<<a - b;
+            break;
 
-    cout<<"Bonus = "<<bonus<<endl;
-    cout<<"Total Salary for Diwali Month = "<<total;
+        case 3:
+            cout<<"Division = "<<a / b;
+            break;
+
+        case 4:
+            cout<<"Multiplication = "<<a * b;
+            break;
+
+        default:
+            cout<<"Invalid choice";
+    }
 
     return 0;
 }
