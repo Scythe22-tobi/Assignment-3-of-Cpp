@@ -2,31 +2,35 @@
 using namespace std;
 int main()
 {
-	//5.Scan array of 6 characters from user.Count how many of them are uppercase alphabets.([] method)
+	/*4.Scan array of 8 integers from user.Print addition of all integers in array.
+	(pointer notaion)
+	*/
 	
-	char ch[6];
-	
+	int num[8];
+	int *p;
+	p=&num[0];
 	int i;
-	cout<<"\n Enter 6 characters =";
-	for(i=0;i<=5;i++)
-	{
-		cin>>ch[i];
-	}
 	
-	int calpha=0;
-	
+	cout<<"\nEnter 8 integers =";
 	i=0;
-	while(i<6)
+	
+	while(i<8)
 	{
-		if(ch[i]>='A' && ch[i]<='Z')
-		{
-			calpha++;
-		}
+		cin>>*(p+i);
 		i++;
 	}
 	
-	cout<<"\nThe total number of upper alphabets ="<<calpha;
+	int add=0;
+	
+	i=0;
+	while(i<8)
+	{
+		add += *(p+i);
+		i++;
+	}
+	
+	cout<<"\nAddition ="<<add;
 	
 	return 0;
-
+	
 }

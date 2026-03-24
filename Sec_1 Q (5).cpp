@@ -2,27 +2,31 @@
 using namespace std;
 int main()
 {
-	/*6.Declare and initialize an array of 6 integers.Store square of all elements of this array in another array.
-	Print both arrays.
-	(pointer notaion)*/
+	//5.Scan array of 6 characters from user.Count how many of them are uppercase alphabets.([] method)
 	
-	int num[6]={23,78,075,31,67,22};
-	
-	int sq[6];
+	char ch[6];
 	
 	int i;
-	
+	cout<<"\n Enter 6 characters =";
 	for(i=0;i<=5;i++)
 	{
-		sq[i]= num[i] * num[i];
+		cin>>ch[i];
 	}
+	
+	int calpha=0;
 	
 	i=0;
 	while(i<6)
 	{
-		cout<<"\nSqure of "<<num[i]<<" is ="<<sq[i];
+		if(ch[i]>='A' && ch[i]<='Z')
+		{
+			calpha++;
+		}
 		i++;
 	}
 	
+	cout<<"\nThe total number of upper alphabets ="<<calpha;
+	
 	return 0;
+
 }

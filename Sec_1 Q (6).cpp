@@ -2,22 +2,27 @@
 using namespace std;
 int main()
 {
-	/*7.Declare and initialize an array of 8 integers.Find the largest value from array.(pointer notation*/
+	/*6.Declare and initialize an array of 6 integers.Store square of all elements of this array in another array.
+	Print both arrays.
+	(pointer notaion)*/
 	
-	int num[8]={123,64,82,62,938,639,983,849};
-	int *p=num;
-	int max=*(p);
+	int num[6]={23,78,075,31,67,22};
+	
+	int sq[6];
+	
 	int i;
-	for(i=0;i<=7;i++)
+	
+	for(i=0;i<=5;i++)
 	{
-		if(*(p+i)>max)
-		{
-			max=*(p+i);
-		}	
+		sq[i]= num[i] * num[i];
 	}
 	
-	cout<<"\nLargest = "<<max;
+	i=0;
+	while(i<6)
+	{
+		cout<<"\nSqure of "<<num[i]<<" is ="<<sq[i];
+		i++;
+	}
 	
 	return 0;
-	
 }

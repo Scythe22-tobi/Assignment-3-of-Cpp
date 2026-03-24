@@ -2,35 +2,33 @@
 using namespace std;
 int main()
 {
-	/*4.Scan array of 8 integers from user.Print addition of all integers in array.
-	(pointer notaion)
-	*/
+	//3.Scan array of 5 integers.Copy it in another array.
+	//([] method)
 	
-	int num[8];
-	int *p;
-	p=&num[0];
-	int i;
-	
-	cout<<"\nEnter 8 integers =";
-	i=0;
-	
-	while(i<8)
+	int num[5];
+	cout<<"Enter 5 integers =";
+	int i=0;
+	while(i<5)
 	{
-		cin>>*(p+i);
+		cin>>num[i];
 		i++;
 	}
 	
-	int add=0;
+	int copy[5];
 	
 	i=0;
-	while(i<8)
+	while(i<5)
 	{
-		add += *(p+i);
+		copy[i]=num[i];
 		i++;
 	}
 	
-	cout<<"\nAddition ="<<add;
+	i=0;
+	while(i<5)
+	{
+		cout<<copy[i]<<" ";
+		i++;
+	}
 	
 	return 0;
-	
 }
