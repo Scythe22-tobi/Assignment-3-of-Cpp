@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	//1.Scan array of n integers.Copy it in another array.
+	//2.Scan array of n integers from user.Print addition of all integers in array.
 	
 	int *p;
 	int i;
@@ -18,19 +18,14 @@ int main()
 		cin>>*(p+i);
 	}
 	
-	int *q=new int [n];
-	
-	for(i=0;i<n;i++)
+	int add;
+	for(int i=0;i<n;i++)
 	{
-		*(q+i)=*(p+i);
+		add += *(p+i);
 	}
 	
-	for(i=0;i<n;i++)
-	{
-		cout<<*(q+i)<<" ";
-	}
+	cout<<"\nAddition = "<<add;
 	
 	delete []p;
-	delete []q;
 	return 0;
 }

@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	//5.Declare and initialize an array of n integers.Find the largest value from array.
+	//6.Declare and initialize an array of n integers.Copy it in another array in reverse order.
 	
 	int n;
 	int i;
@@ -18,20 +18,29 @@ int main()
 	{
 		cin>>*(p+i);
 	}
-	int max;
-	max=*(p);
 	
-	for(i=0;i<=n-1;i++)
+	int *rev=new int [n];
+	
+	int j=0;
+	i=n-1;
+	
+	while(i>=0)
 	{
-		if(max<*(p+i))
-		{
-			max=*(p+i);
-		}
+		*(rev+j)=*(p+i);
+		i--;
+		j++;
 	}
 	
-	cout<<"\nThe largest number is ="<<max;
+	cout<<"\nThe reverse order is =";
+	i=0;
+	while(i<n)
+	{
+		cout<<*(rev+i)<<" ";
+		i++;
+	}
 	
 	delete []p;
+	delete []rev;
 	
 	return 0;
 }

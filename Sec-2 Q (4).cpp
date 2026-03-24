@@ -2,35 +2,45 @@
 using namespace std;
 int main()
 {
-	//3.Scan array of n characters from user.Count how many of them are uppercase alphabets.
+	/*4.Declare and initialize an array of n integers.Store square of all elements of this array in another array.
+	Print both arrays.
+	*/
 	
-	char *p;
-	int i;
-	int calpha=0;
 	int n;
-	cout<<"\nEnter the number of Characters you want =";
+	int i;
+	cout<<"\nEnter the number of integers you want in the array=";
 	cin>>n;
 	
-	p= new char [n];
+	int *p=new int [n];
 	
-	cout<<"\nEnter the characters ";
+	int *sq= new int [n];
+	
+	cout<<"\nEnter the "<<n<<" number of integers=";
 	for(i=0;i<n;i++)
 	{
 		cin>>*(p+i);
 	}
 	
-	for(i=0;i<n;i++)
+	for(i=0;i<=n-1;i++)
 	{
-		if(*(p+i)>='A' && *(p+i)<='Z')
-		{
-			calpha++;
-		}
+		*(sq+i)=*(p+i) * *(p+i);
 	}
 	
-	cout<<"\nThe number of Capital letters are ="<<calpha;
+	cout<<"\nThe entered array =";
+	for(int i=0;i<n;i++)
+	{
+		cout<<*(p+i)<<" ";
+	}
+	
+	cout<<"\nThe Squares array =";
+	for(int i=0;i<n;i++)
+	{
+		cout<<*(sq+i)<<" ";
+	}
 	
 	delete []p;
-	return 0;
+	delete []sq;
 	
+	return 0;
 	
 }

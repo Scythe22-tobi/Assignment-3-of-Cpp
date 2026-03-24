@@ -2,45 +2,35 @@
 using namespace std;
 int main()
 {
-	//6.Declare and initialize an array of n integers.Copy it in another array in reverse order.
+	//1.Scan array of n integers.Copy it in another array.
 	
-	int n;
+	int *p;
 	int i;
-	cout<<"\nEnter the number of integers you want in the array=";
+	int n;
+	cout<<"\nEnter the number of integers you want =";
 	cin>>n;
 	
-	int *p=new int [n];
+	p= new int [n];
+	cout<<"\nEnter the numbers ";
 	
-	int *sq= new int [n];
-	
-	cout<<"\nEnter the "<<n<<" number of integers=";
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		cin>>*(p+i);
 	}
 	
-	int *rev=new int [n];
+	int *q=new int [n];
 	
-	int j=0;
-	i=n-1;
-	
-	while(i>=0)
+	for(i=0;i<n;i++)
 	{
-		*(rev+j)=*(p+i);
-		i--;
-		j++;
+		*(q+i)=*(p+i);
 	}
 	
-	cout<<"\nThe reverse order is =";
-	i=0;
-	while(i<n)
+	for(i=0;i<n;i++)
 	{
-		cout<<*(rev+i)<<" ";
-		i++;
+		cout<<*(q+i)<<" ";
 	}
 	
 	delete []p;
-	delete []rev;
-	
+	delete []q;
 	return 0;
 }

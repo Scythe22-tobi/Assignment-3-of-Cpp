@@ -2,9 +2,7 @@
 using namespace std;
 int main()
 {
-	/*4.Declare and initialize an array of n integers.Store square of all elements of this array in another array.
-	Print both arrays.
-	*/
+	//5.Declare and initialize an array of n integers.Find the largest value from array.
 	
 	int n;
 	int i;
@@ -20,27 +18,20 @@ int main()
 	{
 		cin>>*(p+i);
 	}
+	int max;
+	max=*(p);
 	
 	for(i=0;i<=n-1;i++)
 	{
-		*(sq+i)=*(p+i) * *(p+i);
+		if(max<*(p+i))
+		{
+			max=*(p+i);
+		}
 	}
 	
-	cout<<"\nThe entered array =";
-	for(int i=0;i<n;i++)
-	{
-		cout<<*(p+i)<<" ";
-	}
-	
-	cout<<"\nThe Squares array =";
-	for(int i=0;i<n;i++)
-	{
-		cout<<*(sq+i)<<" ";
-	}
+	cout<<"\nThe largest number is ="<<max;
 	
 	delete []p;
-	delete []sq;
 	
 	return 0;
-	
 }

@@ -2,30 +2,35 @@
 using namespace std;
 int main()
 {
-	//2.Scan array of n integers from user.Print addition of all integers in array.
+	//3.Scan array of n characters from user.Count how many of them are uppercase alphabets.
 	
-	int *p;
+	char *p;
 	int i;
+	int calpha=0;
 	int n;
-	cout<<"\nEnter the number of integers you want =";
+	cout<<"\nEnter the number of Characters you want =";
 	cin>>n;
 	
-	p= new int [n];
-	cout<<"\nEnter the numbers ";
+	p= new char [n];
 	
-	for(int i=0;i<n;i++)
+	cout<<"\nEnter the characters ";
+	for(i=0;i<n;i++)
 	{
 		cin>>*(p+i);
 	}
 	
-	int add;
-	for(int i=0;i<n;i++)
+	for(i=0;i<n;i++)
 	{
-		add += *(p+i);
+		if(*(p+i)>='A' && *(p+i)<='Z')
+		{
+			calpha++;
+		}
 	}
 	
-	cout<<"\nAddition = "<<add;
+	cout<<"\nThe number of Capital letters are ="<<calpha;
 	
 	delete []p;
 	return 0;
+	
+	
 }
